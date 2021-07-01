@@ -7,8 +7,10 @@ public class Van extends Viechle {
 	private int age;
 	
 	public Van(String size, String model) {
+		super("BMW", 4, 80);
 		this.model = model;
 		this.size = size;
+		
 	}
 	
 	public String getModel() {
@@ -31,6 +33,6 @@ public class Van extends Viechle {
 	}
 	
 	public float bill() {
-		return (this.getAge() * this.getWheelNo());
+		return (this.getWheelNo() * this.getTopSpeed());
 	}
 }

@@ -2,35 +2,37 @@ package com.qa.helloworld;
 
 public class Car extends Viechle {
 
-	private String name;
+	private String make;
 	private String model;
-	private int year;
+
+	public Car(String make, String model) {
+		super("Mercedes", 4, 300);
+		this.model = make;
+		this.make = model;
+
+	}
 	
-	public Car(String name, String model) {
-		this.model = model;
-		this.name = name;
-		
+	public void handbrakeTurn() {
+		System.out.println( model + " Turns the corner at high speed with the handbrake");
 	}
-	public String getName() {
-		return name;
+
+	public String getMake() {
+		return make;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setMake(String make) {
+		this.make = make;
 	}
+
 	public String getModel() {
 		return model;
 	}
+
 	public void setModel(String model) {
 		this.model = model;
 	}
-	public int getYear() {
-		return year;
-	}
-	public void setYear(int year) {
-		this.year = year;
-	}
-	
+
 	public float bill() {
-		return (this.getWheelNo() * this.getYear());
+		return (this.getWheelNo() * this.getTopSpeed());
 	}
 }

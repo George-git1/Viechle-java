@@ -7,6 +7,7 @@ public class Motrorcycle extends Viechle{
 	private int age;
 	
 	public Motrorcycle(String model, String make) {
+		super("Lambo", 4, 140);
 		this.model = model;
 		this.make = make;
 	}
@@ -31,6 +32,6 @@ public class Motrorcycle extends Viechle{
 	}
 
 	public float bill() {
-		return (this.getWheelNo() * this.getAge());
+		return (this.getWheelNo() * this.getTopSpeed());
 	}
 }
